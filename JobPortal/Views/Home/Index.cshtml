@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui">
+    <title>Admin Dashboard</title>
+    <meta content="Admin Dashboard" name="description">
+    <meta content="Themesbrand" name="author">
+    <link rel="shortcut icon" href="~/rex/assets/images/favicon.ico">
+    <link href="~/rex/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/rex/assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+    <link href="~/rex/assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="~/rex/assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Begin page -->
+    <div class="wrapper-page">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="text-center m-0"><a href="" class="logo logo-admin"><img src="" height="30" alt="Login"></a></h3>
+                <div class="p-3">
+                    <h4 class="text-muted font-18 m-b-5 text-center">Welcome Back !</h4>
+                    <p class="text-muted text-center">Sign in to continue .</p>
+
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label for="userpassword">Password</label>
+                        <input type="password" class="form-control" id="userpassword" placeholder="Enter password">
+                    </div>
+                    <div class="form-group row m-t-20">
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                <label class="custom-control-label" for="customControlInline">Remember me</label>
+                            </div>
+                        </div>
+                        <div class="col-6 text-right">
+                            <a asp-controller="Home" asp-action="Dashboard"><button class="btn btn-primary w-md waves-effect waves-light" type="submit">Log In</button></a>
+                        </div>
+                    </div>
+                    <div class="form-group m-t-10 mb-0 row">
+                        <div class="col-12 m-t-20"><a href="" class="text-muted"><i class="mdi mdi-lock"></i> Forgot your password?</a></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="m-t-40 text-center">
+            @*<p>Don't have an account ? <a href="pages-register.html" class="text-primary">Signup Now</a></p>*@
+            <p>© 2019 Job Application Management. </p>
+        </div>
+    </div>
+    <!-- jQuery  -->
+    <script src="~/rex/assets/js/jquery.min.js"></script>
+    <script src="~/rex/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/rex/assets/js/metisMenu.min.js"></script>
+    <script src="~/rex/assets/js/jquery.slimscroll.js"></script>
+    <script src="~/rex/assets/js/waves.min.js"></script>
+    <script src="~/rex/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
