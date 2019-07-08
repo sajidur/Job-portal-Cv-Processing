@@ -108,51 +108,9 @@ namespace JobPortal.Controllers
         [HttpPost]
         public IActionResult Process(EmailSettings model)
         {
-            var client = new MailRepository();
-            // client.Connect(hostname: "imap.gmail.com", username: "taherasiddqua@gmail.com", password: "taherasiddqua007", port: 995, isUseSsl: true);
-            client.Connect(hostname: model.Host, username: model.UserName, password: model.Password, port: 995, isUseSsl: true);
-
-            var allMail = client.GetMail();
-            var emailList = new List<EmailMessage>();
-            foreach (var mail in allMail)
-            {
-                var email = new EmailMessage();
-                var subject = mail.Message.Headers.Subject;
-                var to = string.Join(",", mail.Message.Headers.To.Select(m => m.Address));
-                var from = mail.Message.Headers.From.Address;
-
-                Console.WriteLine("Email Subject: {0}", subject);
-                Console.WriteLine("Sent To: {0}", to);
-                Console.WriteLine("Sent From: {0}", from);
-                email.From = from;
-                email.Subject = subject;
-                email.Body = mail.Message.ToMailMessage().Body;
-                var attachments = client.GetAttachments(mail.Message);
-
-                if (attachments.Any())
-                {
-                    // foreach (var attachment in attachments)
-                    // {
-
-                    // Console.WriteLine("File Location: {0}", attachment);
-                    //}
-                    email.CV = string.Join(',', attachments);
-                }
-                else
-                {
-                    Console.WriteLine("Email has no attachments, if attachments are required, make sure to not delete this email");
-                }
-                //  var mailWithAttachments = client.GetMail(fromAddress:from);
-
-                //foreach (var mailwithAtt in mailWithAttachments)
-                //{
-
-                //    client.Delete(mailwithAtt.MessageNumber);
-                //}
-                // client.Delete(mail.MessageNumber);
-                emailList.Add(email);
-            }
-            return View(emailList);
+            Parser parser = new Parser();
+            parser.ParseData();
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

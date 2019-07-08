@@ -5,7 +5,6 @@ C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\bin\Debug\netcorea
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\bin\Debug\netcoreapp2.2\JobPortal.pdb
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\bin\Debug\netcoreapp2.2\JobPortal.Views.dll
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\bin\Debug\netcoreapp2.2\JobPortal.Views.pdb
-C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.csprojAssemblyReference.cache
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.csproj.CoreCompileInputs.cache
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.RazorAssemblyInfo.cache
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.RazorAssemblyInfo.cs
@@ -37,3 +36,4 @@ C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcorea
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.dll
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.pdb
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.csproj.CopyComplete
+C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.csprojAssemblyReference.cache

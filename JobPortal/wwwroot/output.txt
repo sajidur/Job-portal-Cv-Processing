@@ -1,0 +1,122 @@
+﻿
+Evaluation Only. Created with Aspose.Words. Copyright 2003-2019 Aspose Pty Ltd.
+Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
+Md. Sajidur Rahman
+Address: 429/2/a, South Paikpara, Mirpur-1, Dhaka-1216.Mobile: +8801719304970
+E-mail: sajid.ict@gmail.com Skype: sajid.ict
+LinkedIn: https://www.linkedin.com/in/sajidict/
+Professional Key Point
+I am a software Developer with 6+ years of experience in
+o Software Analysis, Design, Development, Collaborate with developer, business analysts and software architects to plan, design and maintain web- and desktop-based business applications.o Plan and integration with existing systems.
+o Guide team development efforts towards successful project done.
+o Software determining and designing system specification and standards.
+o Provide technical leadership to teammates through coaching and mentorship. Identify and
+encourage areas for growth and improvement within the team.
+Skills:
+● C#, VB.NET, Node.js, MVC, EF, WCF, SignalR, WPF, Linq, Design Pattern, Java, C,
+express, Docker, Microservice, rxjs, UML, Firebase
+● Ajax, Javascript, JQuery, Kendo UI, Bootstrap , Angularjs● SQL Server, Sqlite, MS Access, MySQL,Postgre, Cassandra NoSQL● Crystal Reports , Rdlc
+● Source control TFS, Sourcesafe, GIT, SVN
+● Project Management using ASANA, JIRA, Agile SCRUM● E-commerce (nopcommerce), Financial Business, ERP domain
+Major Project:
+1.  Ha-Meem ERP (Lead Developer)
+Project Summary:
+● Garments Merchandising module,● Inventory module,
+● Commercial module, ● HR & Payroll module
+It’s developed using Asp.Net, C#, SQL Server, Crystal report
+2.  Student Connect (Project Lead)
+Project Summary: ISO certified ( ISO 25010:2011)
+● Real Time student position, parent status, bus route showing.● Student attendance
+● Teacher management
+This application developed using Asp.net, node.js, RxJs, C#, WCF, SignalR, SQL Server
+1
+
+
+Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
+3.  School Bus Connect (Project Lead)
+Project Summary ISO certified ( ISO 25010:2011) ● Real-time bus monitor panel
+● Driver route showing and student stop and parent present status This application developed using Asp.net, C#, WCF, SignalR, SQL Server
+4.  Health Connect (Project Lead)
+Project Summary ISO certified (ISO 25010:2011)
+● Health insurance and health data management application This application developed using node.js, RxJs, express, Postgre DB, Firebase
+5.  Homebound ERP Solutions (Team Member)
+Project Summary
+● Full phase ERP Solutions with Inventory, Sales, Purchase & Accounts module Developed using asp.net, WCF, SQL Server, Crystal Report
+6.  Multi store and multi vendor E-Commerce (with nopcommerce)
+Project Summary
+● Multi vendor and multi store ecommerce solutions● Multi language full feature ecommerce
+7.  Merchant Banking solutions (Team Member)
+Project Summary
+● It’s a Merchant Banking Solutions backend to manage merchant Banking back
+office
+● Can import everyday share bazaar selling data from CDBL export file Developed using asp.net, C#, SQL Server, Telerik , Crystal Report
+Employment History
+Bengal Mobile QA Solutions (Working for Technuf LLC, USA CIMMI L-3 Certified)
+Sr. Software Eng. July 2016-Present
+● Research , design and development .
+● Create business processes, best practices, standards, templates and operating procedures
+to optimize IT project development.
+● Maintain IIS Server , Database Server
+● Lead Offshore Team
+Achievements
+● Design & Develop Real Time Bus Tracking Solutions using Asp.Net MVC, WCF,
+SignalR, C#, SQL Server
+● HealthConnect solutions using node.js, express, rxjs, Postgresql
+● Alert School a family safety apps and web console using node.js,express, rxjs, Cassandra
+NOSQL
+2
+
+
+Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
+Hameem Group
+Software Engg. (Team Lead). July 2014-April 2016
+● Lead teams in the design of new applications, configuration of system upgrades and
+development.
+● Assign schedules, coordinate programmer and allocate resources to ensure efficiency and
+productivity is maximized.
+● Maintain IIS Server
+Achievements
+● Design & Develop Production Automations solutions for Garments Automations using
+Asp.Net, C#, SQL Server, Crystal Report as a Team Leader
+● Develop HR & Payroll for Ha-Meem Group (25+ Unit and company are using)
+Systematic Infosis
+Software Eng. January 2013-June
+● Design & Develop CRM solutions for insurance company using Asp.Net,C#, SQL Server
+● Contribute on Data analysis tools to process data on excel and SQL Server
+● Develop interface at Microsoft Dynamic Solutions (www.wifo.com)
+● Ecommerce systems using Asp.Net MVC (nopcommerce)
+Cygnus Innovation Ltd.
+Jr. Software Eng. April 2012-December 2012
+● Develop Merchant Banking solutions using Asp.Net,C#, SQL Server, Crystal Report
+● Contribute on Brokerage house back office solutions development.
+● Develop Merchant Banking Solutions
+Educational Qualifications:
+Exam Title Concentration/Major Institute CGPA Pass.Year
+M.Engg. Information & Communication Mawlana Bhashani Science 2.95 2015
+Technology and Technology University
+B.Sc (Engg.) Information & Communication Mawlana Bhashani Science 3.13 2011
+Technology and Technology University
+H.S.C Science Kushtia Govt. College 3.90 2006
+S.S.C Science Kaburhat High School 4.25 2004
+Workshop and Training Participation:
+o Training Program on OOP C# and ASP.Net Track-32
+3
+
+
+Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
+By BASIS held on February 01 to April 10 at BASIS Office (180 hours)
+● Sanitation Hackathon
+By World Bank, WSP held on 30th Nov to 1st December in Dhaka
+Personal Details:
+Father's Name: Md. Ataur RahmanMother's Name: Mst. Jahede BegumDate of Birth: March 18, 1989Gender: Male
+Marital Status: Married
+Spouse Name: Tahera SiddiquaNationality: Bangladeshi Religion: Islam
+Permanent Address: Vill: Khazanagor, Post: Jagoti Thana: Kushtia District: Kushtia
+Reference(S):
+Reference 1 Reference 2
+Md Ahsan Habib
+Associate Professor Md Mohibul HasanDepartment of ICT Deputy Manager Mawlana Bhashani Science NOC Department
+& Technology University Bangladesh submarine cable company Ltd. Email: ahsan.habib.tareq@gmail.com Email: mohibul-hasan@outlook.com
+Date: Signature
+4
+Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/

@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Aspose.Words;
+using Microsoft.AspNetCore.Http;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace JobPortal
@@ -22,7 +25,6 @@ namespace JobPortal
         public static int rowIndex = -1;
         public void ParseData()
         {
-
             DataTable dt = new DataTable();
             dt.Columns.AddRange(new DataColumn[9] {
                             new DataColumn("Name", typeof(string)),
@@ -34,10 +36,7 @@ namespace JobPortal
                             new DataColumn("Education", typeof(string)),
                             new DataColumn("Interests", typeof(string)),
                             new DataColumn("Languages", typeof(string))});
-
-
-            string path = HttpContext.Current.Server.MapPath("Input/");
-            DirectoryInfo directoryInfo = new DirectoryInfo(path);
+            DirectoryInfo directoryInfo = new DirectoryInfo(ExtensionClass.AttchmentFolder);
 
             // Get the Excel Files
             FileInfo[] fileinfo = directoryInfo.GetFiles();
@@ -53,14 +52,12 @@ namespace JobPortal
                 education = "";
                 interests = "";
                 languages = "";
-                Converter(HttpContext.Current.Server.MapPath("Input/" + fileinfo[i]), fileinfo[i].Extension);
+                Converter(fileinfo[i].Name, fileinfo[i].Extension);
 
                 dt.Rows.Add(name.Trim(','), email.Trim(','), phone.Trim(','), summary.Trim(','), skills.Trim(',').Trim(), experience.Trim(','), education.Trim(','), interests.Trim(','), languages.Trim(','));
             }
-
             dt.AcceptChanges();
-            HttpContext.Current.Session["DataTable"] = dt;
-
+            ApplicationSettings.Data = dt;
         }
 
         protected void Converter(string path, string extension)
@@ -68,16 +65,16 @@ namespace JobPortal
             switch (extension)
             {
                 case ".pdf":
-                    Aspose.Pdf.Document pdfDoc = new Aspose.Pdf.Document(path);
+                    Aspose.Pdf.Document pdfDoc = new Aspose.Pdf.Document(ExtensionClass.AttchmentFolder+"\\"+path);
                     Aspose.Pdf.DocSaveOptions opts = new Aspose.Pdf.DocSaveOptions();
                     opts.Format = Aspose.Pdf.DocSaveOptions.DocFormat.Doc;
                     opts.Mode = Aspose.Pdf.DocSaveOptions.RecognitionMode.Flow;
-                    pdfDoc.Save(HttpContext.Current.Server.MapPath("Convert/input.doc"), opts);
+                    pdfDoc.Save(ApplicationSettings.Outputurl+"/output.doc", opts);
                     // Load in the document
-                    Document docpdf = new Document(HttpContext.Current.Server.MapPath("Convert/input.doc"));
+                    Document docpdf = new Document(ApplicationSettings.Outputurl + "/output.doc");
 
-                    docpdf.Range.Replace("\t", "\n", false, true);
-                    docpdf.Save(HttpContext.Current.Server.MapPath("Input/input.txt"));
+                    docpdf.Range.Replace("\t", "\n");
+                    docpdf.Save(ApplicationSettings.Outputurl + "/output.txt");
                     break;
                 case ".doc":
                 case ".docx":
@@ -86,24 +83,25 @@ namespace JobPortal
                     {
                         // Load in the document
                         Document doc = new Document(path);
-                        doc.Save(HttpContext.Current.Server.MapPath("Input/input.txt"));
+                        doc.Save(ApplicationSettings.Outputurl + "/output.doc");
                         break;
                     }
             }
-            ConvertDocument(HttpContext.Current.Server.MapPath("Input/input.txt"));
+            ConvertDocument(ApplicationSettings.Outputurl + "/output.doc");
         }
         protected void ConvertDocument(string path)
         {
 
 
 
-            Document doc = new Document(HttpContext.Current.Server.MapPath("Input/input.txt"));
+            Document doc = new Document(ApplicationSettings.Outputurl + "/output.doc");
 
             int total = doc.GetChildNodes(NodeType.Paragraph, true).Count;
 
             //doc.Save(Server.MapPath("Input/input.txt"), SaveFormat.Text);
 
-            ArrayList list = (ArrayList)HttpContext.Current.Session["Markers"];
+            ArrayList list =new ArrayList();
+            list.Add("");
             ArrayList index = new ArrayList();
 
             Hashtable table = new Hashtable();
@@ -136,7 +134,6 @@ namespace JobPortal
                     table.Add(paras, counter);
                     break;
                 }
-
                 paras++;
             }
         }
