@@ -18,7 +18,7 @@
             <div class="brand-card-body">
                 <div class="form-group">
                     <label class="control-label"><b>Job Category</b></label>
-                    <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                    <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="jobCategory">
                         <option>Select</option>
                         <option value="AK">JAVA</option>
                         <option value="HI">Python</option>
@@ -34,11 +34,10 @@
     <!-- /.col-->
     <div class="col-sm-6 col-lg-3">
         <div class="brand-card">
-
             <div class="brand-card-body">
                 <div class="form-group">
                     <label class="control-label"><b>Select Skills</b></label>
-                    <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                    <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="Skills">
                         <option>Select</option>
                         <option value="AK">JAVA</option>
                         <option value="HI">Python</option>
@@ -60,14 +59,11 @@
                 <div class="brand-card-body">
                     <div class="form-group">
                         <label class="control-label"><b>Select Location</b></label>
-                        <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                        <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="Location">
                             <option>Select</option>
                             <option value="AK">JAVA</option>
                             <option value="HI">Python</option>
-                            <option value="CT">C#</option>
-                            <option value="DE">ASP.Net</option>
-                            <option value="FL">PHP</option>
-                            <option value="GA">Laravel</option>
+
                         </select>
                     </div>
                 </div>
@@ -83,14 +79,11 @@
                 <div class="brand-card-body">
                     <div class="form-group">
                         <label class="control-label"> <b>Job Category</b></label>
-                        <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                        <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="Category">
                             <option>Select</option>
                             <option value="AK">JAVA</option>
                             <option value="HI">Python</option>
-                            <option value="CT">C#</option>
-                            <option value="DE">ASP.Net</option>
-                            <option value="FL">PHP</option>
-                            <option value="GA">Laravel</option>
+
                         </select>
                     </div>
                 </div>
@@ -129,14 +122,13 @@
                             <th>#</th>
                             <th class="font-weight-bold">Name</th>
                             <th class="font-weight-bold">Email</th>
-                            <th class="font-weight-bold">Resume URL</th>
-                            <th class="font-weight-bold">Date</th>
-
-                            <th class="font-weight-bold">Approved Status</th>
-                            <th class="font-weight-bold">Axtion Status</th>
+                            <th class="font-weight-bold">Phone</th>
+                            <th class="font-weight-bold">Education</th>
+                            <th class="font-weight-bold">Summary</th>
+                            <th class="font-weight-bold">Resume UR</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="myData">
                         <tr>
                             <th scope="row">1</th>
                             <td>Mark</td>
@@ -147,26 +139,8 @@
                             <td><i class="mdi mdi-checkbox-blank-circle text-success"></i>No Filter</td>
                             <td>No Filter</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton@mail.com</td>
-
-                            <td><i class="mdi mdi-file-pdf" style="font-size: 25px;color: #d43434;"></i>resume</td>
-                            <td>1/1/2019</td>
-                            <td><i class="mdi mdi-checkbox-blank-circle text-success"></i>No Filter</td>
-                            <td>No Filter</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>LarrytheBird</td>
-                            <td>LarrytheBird@mail.com</td>
-
-                            <td><i class="mdi mdi-file-pdf" style="font-size: 25px;color: #d43434;"></i>Resume</td>
-                            <td>1/1/2019</td>
-                            <td><i class="mdi mdi-checkbox-blank-circle text-success"></i>No Filter</td>
-                            <td>No Filter</td>
-                        </tr>
+                        
+                       
                     </tbody>
                 </table>
             </div>
@@ -174,3 +148,48 @@
     </div>
     <!-- end col -->
 </div>
+
+@section Scripts
+    {
+
+    <script src="~/js/jquery-2.2.4.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("select").change(function () {
+                var stId = $("#jobCategory").val();
+                var skill = $("#Skills").val();
+                var location = $("#Location").val();
+                alert(stId);
+                //$("#myData").empty();
+                var json = { jobCategory: stId,skills:skill,location:location};
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetFIlterJsonResult", "Home")',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(json),
+                    success: function (data) {
+                        //alert(data);
+                        //alert(JSON.stringify(data))
+                        if (data.success)
+                            alert("Success");
+                        
+                        
+                        $.each(data, function (index, value) {
+                            //alert(value.Name);
+                            var row = $(" <tr><th scope='row'>1</th><td>" + value.name + "</td><td>" + value.email + "</td><td>" + value.phone +""+ 
+                                "<td><i class=mdi mdi-checkbox-blank-circle text-success></i>No Filter</td><td>" + value.summary + "</td></td><td><i class='mdi mdi-file-pdf' style='font-size: 25px;color: #d43434;'></i>Resume</td> </tr>");
+                            $("#myData").append(row);
+                            var row2 = $("<tr><td style='border: 1px solid black; padding: 5px 10px;'>" + value.Code + "</td><td style='border: 1px solid black; padding: 5px 10px;'>" + value.Name + "</td><td style='border: 1px solid black; padding: 5px 10px;'>" + value.Grade + "</td></tr>");
+                            $("#myDataPrint").append(row2);
+
+                        });
+                    }
+                });
+
+            });
+
+        });
+    </script>
+
+}

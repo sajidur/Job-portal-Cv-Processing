@@ -1,16 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Aspose.Pdf.Drawing;
 using Microsoft.AspNetCore.Mvc;
 using JobPortal.Models;
+using  System.IO;
 using JobPortal.BL;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting.Internal;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using Path = System.IO.Path;
 
 namespace JobPortal.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly JobPortalDbContext _context;
+        private CandidateInfo candidate;
+
+        public HomeController(JobPortalDbContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
             return View();
@@ -28,6 +45,20 @@ namespace JobPortal.Controllers
         public IActionResult JobSettings()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> JobSettings([Bind("Id,JobId,JobTitle,Company,vacancy,TopSkills,MinorSkills")] JobSettings jobSettings)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(jobSettings);
+               
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(jobSettings);
         }
         public IActionResult Import()
         {
@@ -106,11 +137,80 @@ namespace JobPortal.Controllers
         }
 
         [HttpPost]
-        public IActionResult Process(EmailSettings model)
+        public IActionResult Upload(IFormFile file)
         {
-            Parser parser = new Parser();
-            parser.ParseData();
+            var fileName = file.FileName;
+            //Parser parser = new Parser();
+            //parser.ParseData();
+
+            //var path = Path.Combine(hostingEnvironment.WebRootPath, "Attchment");
+
+            // var filePath = Path.Combine(path, fileName);
+            //FileInp
+
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Attchment", fileName);
+            using (var fileStream=new FileStream(path,FileMode.Create))
+            {
+                file.CopyTo(fileStream);
+            }
+
             return View();
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult> Process(IFormFile file)
+        {
+
+            var fileName = file.FileName;
+            if (fileName != null)
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Attchment", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+            }
+
+            Parser parser = new Parser();
+            DataTable dt = parser.ParseData();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                candidate = new CandidateInfo();
+                candidate.Name = row["name"].ToString();
+                candidate.Email = row["email"].ToString();
+                candidate.Phone = row["phone"].ToString();
+                candidate.Skills = row["skills"].ToString();
+                candidate.Summary = row["summary"].ToString();
+                candidate.Experience = row["experience"].ToString();
+                candidate.Education = row["education"].ToString();
+                 // candidate. = row["interests"].ToString();
+
+                 if (ModelState.IsValid)
+                 {
+                     _context.Add(candidate);                   
+                    await _context.SaveChangesAsync();
+                     //return RedirectToAction(nameof(Index));
+                 }
+
+               
+
+
+            }
+            return View();
+        }
+
+
+
+        public JsonResult GetFIlterJsonResult(string jobCategory,string skills,string location)
+        {
+            //var sa = new JsonSerializerSettings();
+            //List<CandidateInfo> candidateList=new List<CandidateInfo>();
+            //candidateList = _context.Candidate.ToList();
+            IEnumerable<CandidateInfo> candidateList = _context.Candidate.ToList();
+            ////return Json(courses, JsonRequestBehavior.AllowGet);
+            return Json(candidateList);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -6,13 +6,24 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using JobPortal.Controllers;
+using JobPortal.Models;
 
 namespace JobPortal
 {
     public class Parser
     {
+        //private readonly JobPortalDbContext _context;
+        private CandidateInfo candidate;
+
+       //private HomeController homeController=new HomeController();
+
+
+
+ 
         public static string name = "";
         public static string email = "";
         public static string phone = "";
@@ -23,7 +34,7 @@ namespace JobPortal
         public static string interests = "";
         public static string languages = "";
         public static int rowIndex = -1;
-        public void ParseData()
+        public DataTable ParseData()
         {
             DataTable dt = new DataTable();
             dt.Columns.AddRange(new DataColumn[9] {
@@ -37,6 +48,10 @@ namespace JobPortal
                             new DataColumn("Interests", typeof(string)),
                             new DataColumn("Languages", typeof(string))});
             DirectoryInfo directoryInfo = new DirectoryInfo(ExtensionClass.AttchmentFolder);
+            //string path = HttpContext.Current.Server.MapPath("Input/");
+           // string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Attchment");
+
+           // DirectoryInfo directoryInfo = new DirectoryInfo(path);
 
             // Get the Excel Files
             FileInfo[] fileinfo = directoryInfo.GetFiles();
@@ -55,10 +70,24 @@ namespace JobPortal
                 Converter(fileinfo[i].Name, fileinfo[i].Extension);
 
                 dt.Rows.Add(name.Trim(','), email.Trim(','), phone.Trim(','), summary.Trim(','), skills.Trim(',').Trim(), experience.Trim(','), education.Trim(','), interests.Trim(','), languages.Trim(','));
+
             }
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            for (int j = 0; j < dt.Columns.Count; j++)
+            {
+                object o = dt.Rows[i].ItemArray[j];
+               
+                    //if you want to get the string
+                    //string s = o = dt.Rows[i].ItemArray[j].ToString();
+                }
+
             dt.AcceptChanges();
             ApplicationSettings.Data = dt;
+            return dt;
         }
+
+       
 
         protected void Converter(string path, string extension)
         {
@@ -100,8 +129,14 @@ namespace JobPortal
 
             //doc.Save(Server.MapPath("Input/input.txt"), SaveFormat.Text);
 
-            ArrayList list =new ArrayList();
-            list.Add("");
+            ArrayList list =new ArrayList();//select from database
+            list.Add("Professional Key Point");
+            list.Add("specialties");
+            list.Add("Skills");
+            list.Add("experience,Experience,Employment History");
+            list.Add("education,Scholastics,Educational​ ​Qualifications​:");
+            list.Add("interests");
+            list.Add("language");
             ArrayList index = new ArrayList();
 
             Hashtable table = new Hashtable();
@@ -363,10 +398,13 @@ namespace JobPortal
         public static ArrayList ExtractContent(Node startNode, Node endNode, bool isInclusive)
         {
             // First check that the nodes passed to this method are valid for use.
-            VerifyParameterNodes(startNode, endNode);
+         bool check=  VerifyParameterNodes(startNode, endNode);
+        
 
             // Create a list to store the extracted nodes.
             ArrayList nodes = new ArrayList();
+            if (check == false)
+                return nodes;
 
             // Keep a record of the original nodes passed to this method so we can split marker nodes if needed.
             Node originalStartNode = startNode;
@@ -435,7 +473,7 @@ namespace JobPortal
         /// <summary>
         /// Checks the input parameters are correct and can be used. Throws an exception if there is any problem.
         /// </summary>
-        private static void VerifyParameterNodes(Node startNode, Node endNode)
+        private static bool  VerifyParameterNodes(Node startNode, Node endNode)
         {
             // The order in which these checks are done is important.
             if (startNode == null)
@@ -447,7 +485,8 @@ namespace JobPortal
                 throw new ArgumentException("Start node and end node must belong to the same document");
 
             if (startNode.GetAncestor(NodeType.Body) == null || endNode.GetAncestor(NodeType.Body) == null)
-                throw new ArgumentException("Start node and end node must be a child or descendant of a body");
+                return false;
+                //throw new ArgumentException("Start node and end node must be a child or descendant of a body");
 
             // Check the end node is after the start node in the DOM tree
             // First check if they are in different sections, then if they're not check their position in the body of the same section they are in.
@@ -460,10 +499,16 @@ namespace JobPortal
             if (startIndex == endIndex)
             {
                 if (startSection.Body.IndexOf(startNode) > endSection.Body.IndexOf(endNode))
-                    throw new ArgumentException("The end node must be after the start node in the body");
+                    return false;
+               // throw new ArgumentException("The end node must be after the start node in the body");
             }
             else if (startIndex > endIndex)
-                throw new ArgumentException("The section of end node must be after the section start node");
+            {
+                return false;
+               // throw new ArgumentException("The section of end node must be after the section start node");
+            }
+
+            return true;
         }
 
         /// <summary>
