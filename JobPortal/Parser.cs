@@ -130,11 +130,11 @@ namespace JobPortal
             //doc.Save(Server.MapPath("Input/input.txt"), SaveFormat.Text);
 
             ArrayList list =new ArrayList();//select from database
-            list.Add("Professional Key Point");
+            list.Add("Professional Key Point,CAREER OBJECTIVES :,CAREER OBJECTIVE");
             list.Add("specialties");
             list.Add("Skills");
             list.Add("experience,Experience,Employment History");
-            list.Add("education,Scholastics,Educational​ ​Qualifications​:");
+            list.Add("education,Scholastics,Educational​ ​Qualifications​:,EDUCATION");
             list.Add("interests");
             list.Add("language");
             ArrayList index = new ArrayList();

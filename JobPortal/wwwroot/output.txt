@@ -1,122 +1,79 @@
 ﻿
 Evaluation Only. Created with Aspose.Words. Copyright 2003-2019 Aspose Pty Ltd.
 Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
-Md. Sajidur Rahman
-Address: 429/2/a, South Paikpara, Mirpur-1, Dhaka-1216.Mobile: +8801719304970
-E-mail: sajid.ict@gmail.com Skype: sajid.ict
-LinkedIn: https://www.linkedin.com/in/sajidict/
-Professional Key Point
-I am a software Developer with 6+ years of experience in
-o Software Analysis, Design, Development, Collaborate with developer, business analysts and software architects to plan, design and maintain web- and desktop-based business applications.o Plan and integration with existing systems.
-o Guide team development efforts towards successful project done.
-o Software determining and designing system specification and standards.
-o Provide technical leadership to teammates through coaching and mentorship. Identify and
-encourage areas for growth and improvement within the team.
-Skills:
-● C#, VB.NET, Node.js, MVC, EF, WCF, SignalR, WPF, Linq, Design Pattern, Java, C,
-express, Docker, Microservice, rxjs, UML, Firebase
-● Ajax, Javascript, JQuery, Kendo UI, Bootstrap , Angularjs● SQL Server, Sqlite, MS Access, MySQL,Postgre, Cassandra NoSQL● Crystal Reports , Rdlc
-● Source control TFS, Sourcesafe, GIT, SVN
-● Project Management using ASANA, JIRA, Agile SCRUM● E-commerce (nopcommerce), Financial Business, ERP domain
-Major Project:
-1.  Ha-Meem ERP (Lead Developer)
-Project Summary:
-● Garments Merchandising module,● Inventory module,
-● Commercial module, ● HR & Payroll module
-It’s developed using Asp.Net, C#, SQL Server, Crystal report
-2.  Student Connect (Project Lead)
-Project Summary: ISO certified ( ISO 25010:2011)
-● Real Time student position, parent status, bus route showing.● Student attendance
-● Teacher management
-This application developed using Asp.net, node.js, RxJs, C#, WCF, SignalR, SQL Server
-1
+Curriculum VitaeOf
+MD. ZAHID HASAN
+R/A Road-13, House No-9Mirpur-6, Dhaka-1216 Contact: +8801773-333963
+E-mail: zahid.cse07@gmail.com
+CAREER OBJECTIVE
+I would like to build up my career as an IT professional. To gain a challenging position in awell-reputed organization that will utilize my talent properly and provide me with theopportunity of enhancing my skill.
+KEY SKILLS
+· Experience building a variety of different web applications and sites using PHP and
+MYSQL.
+· Good knowledge and understanding of Object Oriented Programming (OOP).· Good knowledge of Database.
+· Experience in working with MYSQL and SQL Server.· Good analytical, logical and programming skills.· Basic knowledge of MVC framework.
+· Ability to learn & develop using new technologies quickly.
+TECHNICAL SKILLS
+· Programming Language : C++, C#, JAVA, PHP.
+· Database : MS SQL Server, MySQL.· Client-side : Html, CSS, Bootstrap, JavaScript, jQuery, Ajax.· Development Tools : NetBeans, PHPStorm, Eclipse, Visual Studio.· Microsoft Technologies : ASP.Net, C#.Net, ADO.Net· Application Servers : Apache
+· Version Control : Familiar with Git.
+INTERNSHIP
+· Course Name : Web Development Using PHP.
+Training Institute : IBCS-PRIMAX : Dhanmondi, Dhaka-1209
+Duration : 2 months
 
 
 Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
-3.  School Bus Connect (Project Lead)
-Project Summary ISO certified ( ISO 25010:2011) ● Real-time bus monitor panel
-● Driver route showing and student stop and parent present status This application developed using Asp.net, C#, WCF, SignalR, SQL Server
-4.  Health Connect (Project Lead)
-Project Summary ISO certified (ISO 25010:2011)
-● Health insurance and health data management application This application developed using node.js, RxJs, express, Postgre DB, Firebase
-5.  Homebound ERP Solutions (Team Member)
-Project Summary
-● Full phase ERP Solutions with Inventory, Sales, Purchase & Accounts module Developed using asp.net, WCF, SQL Server, Crystal Report
-6.  Multi store and multi vendor E-Commerce (with nopcommerce)
-Project Summary
-● Multi vendor and multi store ecommerce solutions● Multi language full feature ecommerce
-7.  Merchant Banking solutions (Team Member)
-Project Summary
-● It’s a Merchant Banking Solutions backend to manage merchant Banking back
-office
-● Can import everyday share bazaar selling data from CDBL export file Developed using asp.net, C#, SQL Server, Telerik , Crystal Report
-Employment History
-Bengal Mobile QA Solutions (Working for Technuf LLC, USA CIMMI L-3 Certified)
-Sr. Software Eng. July 2016-Present
-● Research , design and development .
-● Create business processes, best practices, standards, templates and operating procedures
-to optimize IT project development.
-● Maintain IIS Server , Database Server
-● Lead Offshore Team
-Achievements
-● Design & Develop Real Time Bus Tracking Solutions using Asp.Net MVC, WCF,
-SignalR, C#, SQL Server
-● HealthConnect solutions using node.js, express, rxjs, Postgresql
-● Alert School a family safety apps and web console using node.js,express, rxjs, Cassandra
-NOSQL
-2
+PROJECTS
+· Project Title : E-commerce Site using PHP
+Description : an E-commerce website for online shopping, include shopping
+cart, product search.
+Technologies used : PHP, MySQL, Html, JavaScript, JQuerySource Code link : https://github.com/zahid99/ecommerce/
+· Project Title : Online Doctor Appointment System
+Description : Online Doctor appointment booking system that provides patients or any user an easy way of booking a doctor's appointment online, include doctor search.
+Technologies used : PHP, MySQL, Html, JavaScript, JQuerySource Code link :  https://gitlab.com/zahid99/doctor-appointment
+· Project Title : TV site Using PHP
+Technologies used : PHP, MySQL, Html, JavaScriptLive Demo : https://gitlab.com/zahid99/tv-7unity
+· Project Title : Blog Site using PHP
+Technologies used : PHP, Html, JavaScript, Bootstrap, MySQLSource Code link : https://gitlab.com/zahid99/blog
+· Project Title : Online Courier Management System
+Technologies used : PHP, Html, JavaScript, Bootstrap, MySQLSource Code link : https://gitlab.com/zahid99/courier
+· Project Title : Online Event Information
+Technologies used : C#, ASP.Net, Html, JavaScript, Bootstrap, SQL ServerSource Code link : https://github.com/zahid99/event-information-system
+EDUCATION
+· Bachelor of Science in Computer Science Engineering
+Institution : Bangladesh University of Business & Technology (BUBT).Result : 3.30 Duration : 2014-2018
+· Higher Secondary Certificate (H.S.C)
+Institution : Govt. Azizul Haque College.Result : 4.60 Duration : 2011-2012
+· Secondary School Certificate (S.S.C)
+Institution : Police Lines High School and College.Result : 5.00 Duration : 2010
 
 
 Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
-Hameem Group
-Software Engg. (Team Lead). July 2014-April 2016
-● Lead teams in the design of new applications, configuration of system upgrades and
-development.
-● Assign schedules, coordinate programmer and allocate resources to ensure efficiency and
-productivity is maximized.
-● Maintain IIS Server
-Achievements
-● Design & Develop Production Automations solutions for Garments Automations using
-Asp.Net, C#, SQL Server, Crystal Report as a Team Leader
-● Develop HR & Payroll for Ha-Meem Group (25+ Unit and company are using)
-Systematic Infosis
-Software Eng. January 2013-June
-● Design & Develop CRM solutions for insurance company using Asp.Net,C#, SQL Server
-● Contribute on Data analysis tools to process data on excel and SQL Server
-● Develop interface at Microsoft Dynamic Solutions (www.wifo.com)
-● Ecommerce systems using Asp.Net MVC (nopcommerce)
-Cygnus Innovation Ltd.
-Jr. Software Eng. April 2012-December 2012
-● Develop Merchant Banking solutions using Asp.Net,C#, SQL Server, Crystal Report
-● Contribute on Brokerage house back office solutions development.
-● Develop Merchant Banking Solutions
-Educational Qualifications:
-Exam Title Concentration/Major Institute CGPA Pass.Year
-M.Engg. Information & Communication Mawlana Bhashani Science 2.95 2015
-Technology and Technology University
-B.Sc (Engg.) Information & Communication Mawlana Bhashani Science 3.13 2011
-Technology and Technology University
-H.S.C Science Kushtia Govt. College 3.90 2006
-S.S.C Science Kaburhat High School 4.25 2004
-Workshop and Training Participation:
-o Training Program on OOP C# and ASP.Net Track-32
-3
+EXTRA-CURRICULAR ACTIVITIES
+· Participation in Programming contest.
+· Member at Microsoft Student Partnership (MSP) from Feb 2017-Feb 2018.
+PORTFOLIO
+My Portfolio is available on https://zahid99.github.io/zahid/
+PERSONAL PROFILE
+· Father’s Name : MD. ZAHURUL ISLAM
+· Mother’s Name : MST. ZAHERA BEGUM
+· Date of Birth : DECEMBER 18, 1995
+· Gender : Male
+· Marital Status : Unmarried
+· Nationality : Bangladeshi
+· Religion : Islam
+· Permanent address : Village: Lotifpur, Post-office: Bogura sadar, District: Bogura
+· Current Location : Dhaka
+REFERENCES
+ Md. Fahad Md. Fazle RabbiAssistant Database Administrator Lecturer Sonali Bank Ltd Department of Computer Science IT Division (BUBT)
+Head Office, Motijheel, Dhaka-1000. Phone: +8801913446575
+Phone: +8801913242961 E-mail: rabbi102@gmail.com
+E-mail: fahad.cse.cu@gmail.com
+ I am undersigned, hereby declare that I will be responsible for any wrong informationprovided here.
+(ZAHID)
+Date: 16-09-2018
 
 
 Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
-By BASIS held on February 01 to April 10 at BASIS Office (180 hours)
-● Sanitation Hackathon
-By World Bank, WSP held on 30th Nov to 1st December in Dhaka
-Personal Details:
-Father's Name: Md. Ataur RahmanMother's Name: Mst. Jahede BegumDate of Birth: March 18, 1989Gender: Male
-Marital Status: Married
-Spouse Name: Tahera SiddiquaNationality: Bangladeshi Religion: Islam
-Permanent Address: Vill: Khazanagor, Post: Jagoti Thana: Kushtia District: Kushtia
-Reference(S):
-Reference 1 Reference 2
-Md Ahsan Habib
-Associate Professor Md Mohibul HasanDepartment of ICT Deputy Manager Mawlana Bhashani Science NOC Department
-& Technology University Bangladesh submarine cable company Ltd. Email: ahsan.habib.tareq@gmail.com Email: mohibul-hasan@outlook.com
-Date: Signature
-4
 Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/

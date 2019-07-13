@@ -64,8 +64,19 @@ namespace JobPortal.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Filter(string jobCategory,string Skills,string location)
+        {
+            
+            List<CandidateInfo>candidateList = _context.Candidate.FromSql("select distinct Phone,Name,Email,Skills,substring(Summary,0,300) as 'Summary' ,Experience,Education,0 as 'Id'  from Candidate where len(Phone)>0 and LEN(Name)>0").ToList();
+            ViewBag.candidateList = candidateList;
+            return View();
+        }
+
         public IActionResult Filter()
         {
+            //var data = _context.Candidate.FromSql("");
             return View();
         }
 
@@ -91,8 +102,10 @@ namespace JobPortal.Controllers
         public IActionResult ImportList(EmailSettings model)
         {
             var client = new MailRepository();
-           // client.Connect(hostname: "imap.gmail.com", username: "taherasiddqua@gmail.com", password: "taherasiddqua007", port: 995, isUseSsl: true);
-            client.Connect(hostname: model.Host, username: model.UserName, password: model.Password, port: 995, isUseSsl: true);
+             client.Connect(hostname: "imap.gmail.com", username: "taherasiddqua@gmail.com", password: "taherasiddqua007", port: 995, isUseSsl: true);
+            //client.Connect(hostname: "imap.gmail.com", username: "zahid.bubt27@gmail.com", password: "zahidhasan1234", port: 995, isUseSsl: true);
+
+            //client.Connect(hostname: model.Host, username: model.UserName, password: model.Password, port: 995, isUseSsl: true);
             var allMail = client.GetMail();
             var emailList = new List<EmailMessage>();
             foreach (var mail in allMail)
@@ -139,38 +152,38 @@ namespace JobPortal.Controllers
         [HttpPost]
         public IActionResult Upload(IFormFile file)
         {
-            var fileName = file.FileName;
-            //Parser parser = new Parser();
-            //parser.ParseData();
-
-            //var path = Path.Combine(hostingEnvironment.WebRootPath, "Attchment");
-
-            // var filePath = Path.Combine(path, fileName);
-            //FileInp
-
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Attchment", fileName);
-            using (var fileStream=new FileStream(path,FileMode.Create))
+            try
             {
-                file.CopyTo(fileStream);
+                var fileName = file.FileName;
+                if (fileName != null)
+                {
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Attchment", fileName);
+                    using (var fileStream = new FileStream(path, FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+                }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+           
+
+            //var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Attchment", fileName);
+            //using (var fileStream=new FileStream(path,FileMode.Create))
+            //{
+            //    file.CopyTo(fileStream);
+            //}
 
             return View();
         }
 
         [HttpPost]
 
-        public async Task<IActionResult> Process(IFormFile file)
+        public async Task<IActionResult> Process()
         {
-
-            var fileName = file.FileName;
-            if (fileName != null)
-            {
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Attchment", fileName);
-                using (var fileStream = new FileStream(path, FileMode.Create))
-                {
-                    file.CopyTo(fileStream);
-                }
-            }
 
             Parser parser = new Parser();
             DataTable dt = parser.ParseData();
@@ -202,13 +215,14 @@ namespace JobPortal.Controllers
         }
 
 
-
-        public JsonResult GetFIlterJsonResult(string jobCategory,string skills,string location)
+        [HttpPost]
+        public JsonResult GetFIlterJsonResult(string jobCategory)
         {
             //var sa = new JsonSerializerSettings();
             //List<CandidateInfo> candidateList=new List<CandidateInfo>();
             //candidateList = _context.Candidate.ToList();
-            IEnumerable<CandidateInfo> candidateList = _context.Candidate.ToList();
+            string x = jobCategory;
+            IEnumerable<CandidateInfo> candidateList = _context.Candidate.FromSql("select * from Candidate where len(Phone)>0").ToList();
             ////return Json(courses, JsonRequestBehavior.AllowGet);
             return Json(candidateList);
         }

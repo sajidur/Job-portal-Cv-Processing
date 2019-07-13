@@ -11,87 +11,106 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-6 col-lg-3">
-        <div class="brand-card">
-
-            <div class="brand-card-body">
-                <div class="form-group">
-                    <label class="control-label"><b>Job Category</b></label>
-                    <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="jobCategory">
-                        <option>Select</option>
-                        <option value="AK">JAVA</option>
-                        <option value="HI">Python</option>
-                        <option value="CT">C#</option>
-                        <option value="DE">ASP.Net</option>
-                        <option value="FL">PHP</option>
-                        <option value="GA">Laravel</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.col-->
-    <div class="col-sm-6 col-lg-3">
-        <div class="brand-card">
-            <div class="brand-card-body">
-                <div class="form-group">
-                    <label class="control-label"><b>Select Skills</b></label>
-                    <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="Skills">
-                        <option>Select</option>
-                        <option value="AK">JAVA</option>
-                        <option value="HI">Python</option>
-                        <option value="CT">C#</option>
-                        <option value="DE">ASP.Net</option>
-                        <option value="FL">PHP</option>
-                        <option value="GA">Laravel</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.col-->
-    <div class="col-sm-6 col-lg-3">
-        <div class="brand-card">
-
+<form method="post">
+    <div class="row">
+        <div class="col-sm-6 col-lg-3">
             <div class="brand-card">
 
                 <div class="brand-card-body">
                     <div class="form-group">
-                        <label class="control-label"><b>Select Location</b></label>
-                        <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="Location">
+                        <label class="control-label"><b>Job Category</b></label>
+                        <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="jobCategory" name="jobCategory">
                             <option>Select</option>
                             <option value="AK">JAVA</option>
                             <option value="HI">Python</option>
-
+                            <option value="CT">C#</option>
+                            <option value="DE">ASP.Net</option>
+                            <option value="FL">PHP</option>
+                            <option value="GA">Laravel</option>
                         </select>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.col-->
-    <div class="col-sm-6 col-lg-3">
-        <div class="brand-card">
-
+        <!-- /.col-->
+        <div class="col-sm-6 col-lg-3">
             <div class="brand-card">
-
                 <div class="brand-card-body">
                     <div class="form-group">
-                        <label class="control-label"> <b>Job Category</b></label>
-                        <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="Category">
+                        <label class="control-label"><b>Select Skills</b></label>
+                        <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="Skills" name="Skills">
                             <option>Select</option>
                             <option value="AK">JAVA</option>
                             <option value="HI">Python</option>
-
+                            <option value="CT">C#</option>
+                            <option value="DE">ASP.Net</option>
+                            <option value="FL">PHP</option>
+                            <option value="GA">Laravel</option>
                         </select>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- /.col-->
+        <div class="col-sm-6 col-lg-3">
+            <div class="brand-card">
+
+                <div class="brand-card">
+
+                    <div class="brand-card-body">
+                        <div class="form-group">
+                            <label class="control-label"><b>Select Location</b></label>
+                            <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="Location" name="location">
+                                <option>Select</option>
+                                <option value="AK">JAVA</option>
+                                <option value="HI">Python</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-->
+        @*<div class="col-sm-6 col-lg-3">
+            <div class="brand-card">
+
+                <div class="brand-card">
+
+                    <div class="brand-card-body">
+                        <div class="form-group">
+                            <label class="control-label"> <b>Job Category</b></label>
+                            <select class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="Category">
+                                <option>Select</option>
+                                <option value="AK">JAVA</option>
+                                <option value="HI">Python</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+        <!-- /.col-->
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="brand-card">
+
+                <div class="brand-card">
+
+                    <div class="brand-card-body">
+                        <div class="form-group">
+                            <label class="control-label"> <b></b></label>
+                            <button type="submit" class="btn btn-primary danger" style="width:100%;">Process</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <!-- /.col-->
-</div>
+
+</form>
 <div class="row">
     <div class="col-sm-12">
         <div class="page-title-box">
@@ -128,8 +147,8 @@
                             <th class="font-weight-bold">Resume UR</th>
                         </tr>
                     </thead>
-                    <tbody id="myData">
-                        <tr>
+                    <tbody>
+                    @*<tr>
                             <th scope="row">1</th>
                             <td>Mark</td>
                             <td>Otto@mail.com</td>
@@ -138,8 +157,29 @@
                             <td>1/1/2019</td>
                             <td><i class="mdi mdi-checkbox-blank-circle text-success"></i>No Filter</td>
                             <td>No Filter</td>
-                        </tr>
+                        </tr>*@
                         
+                    
+                    @if (ViewBag.candidateList != null)
+                    {
+                        @foreach (var Candidate in ViewBag.candidateList)
+                         {
+
+
+                             <tr>
+                                 <th scope="row">1</th>
+                                 <td>@Candidate.Name</td>
+                                 <td>@Candidate.Email</td>
+                                 <td>@Candidate.Phone</td>
+                                 <td>@Candidate.Summary</td>
+                                 <td><i class="mdi mdi-checkbox-blank-circle text-success"></i>No Filter</td>
+                                 <td><i class="mdi mdi-file-pdf" style="font-size: 25px;color: #d43434;"></i>Resume</td>
+
+
+
+                             </tr>
+                         }
+                    }
                        
                     </tbody>
                 </table>
@@ -156,23 +196,23 @@
 
     <script>
         $(document).ready(function() {
-            $("select").change(function () {
-                var stId = $("#jobCategory").val();
+            $("").change(function () {
+                var jobCategory = $("#jobCategory").val();
                 var skill = $("#Skills").val();
                 var location = $("#Location").val();
-                alert(stId);
-                //$("#myData").empty();
-                var json = { jobCategory: stId,skills:skill,location:location};
+                alert(jobCategory);
+                $("#myData").empty();
+                var json = { jobCategory: jobCategory,skills:skill,location:location};
                 $.ajax({
                     type: "POST",
                     url: '@Url.Action("GetFIlterJsonResult", "Home")',
                     contentType: "application/json; charset=utf-8",
-                    data: JSON.stringify(json),
+                    data: { "jobCategory": jobCategory},
                     success: function (data) {
                         //alert(data);
                         //alert(JSON.stringify(data))
-                        if (data.success)
-                            alert("Success");
+                        //if (data.success)
+                        //    alert("Success");
                         
                         
                         $.each(data, function (index, value) {
