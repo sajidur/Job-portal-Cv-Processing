@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="DAL\" />
     <Folder Include="wwwroot\rex\assets\images\users\" />
   </ItemGroup>
 

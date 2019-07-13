@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Import";
+}
+<div class="container">
+    <div><h3>Import your CV with Email or upload</h3></div>
+    <hr />
+    <form action="/Home/ImportList" method="post">
+        <div class="form-row">
+            <label for="inputEmail4">Select for the Job</label>
+            <select class="form-control form-control-lg">
+                <option>Select</option>
+                <option>Software Eng(IT-00001)</option>
+                <option>Sr.Software Eng(IT-00002)</option>
+                <option>Lead Eng(IT-00003)</option>
+
+            </select>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">User Name</label>
+                <input type="text" class="form-control" id="UserName" name="UserName" placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="Password" name="Password" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">SMTP Server</label>
+                <input type="text" class="form-control" id="Host" name="Host" placeholder="imap Server">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Port</label>
+                <input type="text" class="form-control" id="Port" name="Port" value="995" placeholder="Port Exm:25,487">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">From Date</label>
+                <input type="date" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputCity">To Date</label>
+                <input type="date" class="form-control" id="inputCity">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Is SSL
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Import</button>
+        </div>
+
+    </form>
+    <form action="/Home/Upload" method="post" enctype="multipart/form-data">
+        <div class="row">
+            @*<div class="col-md-2">
+                    <button type="submit" class="btn btn-primary">Import</button>
+                </div>*@
+            <div class="col-md-1">
+                <h4 style="color:cornflowerblue;">OR</h4>
+            </div>
+            <div class="col-md-2">
+                <h4> Upload files</h4>
+            </div>
+            <div class="col-md-7">
+                <div class="input-group mb-3">
+                    <div class="custom-file">
+                        <input type="file"  class="custom-file-input" id="inputGroupFile02" name="file">
+                        <label class="custom-file-label" for="inputGroupFile0">Choose file</label>
+                    </div>
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <hr />
+    <form action="/Home/Process" method="post">
+        <button type="submit" class="btn btn-primary danger" style="width:100%;">Process</button>
+    </form>
+
+</div>

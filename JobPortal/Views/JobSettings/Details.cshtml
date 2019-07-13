@@ -1,0 +1,55 @@
+﻿@model JobPortal.Models.JobSettings
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JobSettings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Company)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Company)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.vacancy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.vacancy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TopSkills)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TopSkills)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MinorSkills)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MinorSkills)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

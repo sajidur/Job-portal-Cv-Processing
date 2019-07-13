@@ -1,0 +1,57 @@
+﻿@model JobPortal.Models.JobSettings
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>JobSettings</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="JobId" class="control-label"></label>
+                <input asp-for="JobId" class="form-control" />
+                <span asp-validation-for="JobId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobTitle" class="control-label"></label>
+                <input asp-for="JobTitle" class="form-control" />
+                <span asp-validation-for="JobTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Company" class="control-label"></label>
+                <input asp-for="Company" class="form-control" />
+                <span asp-validation-for="Company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="vacancy" class="control-label"></label>
+                <input asp-for="vacancy" class="form-control" />
+                <span asp-validation-for="vacancy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TopSkills" class="control-label"></label>
+                <input asp-for="TopSkills" class="form-control" />
+                <span asp-validation-for="TopSkills" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MinorSkills" class="control-label"></label>
+                <input asp-for="MinorSkills" class="form-control" />
+                <span asp-validation-for="MinorSkills" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

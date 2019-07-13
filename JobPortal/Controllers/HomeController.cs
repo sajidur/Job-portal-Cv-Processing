@@ -1,16 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Aspose.Pdf.Drawing;
 using Microsoft.AspNetCore.Mvc;
 using JobPortal.Models;
+using  System.IO;
 using JobPortal.BL;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting.Internal;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using Path = System.IO.Path;
 
 namespace JobPortal.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly JobPortalDbContext _context;
+        private CandidateInfo candidate;
+
+        public HomeController(JobPortalDbContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
             return View();
@@ -29,12 +46,37 @@ namespace JobPortal.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> JobSettings([Bind("Id,JobId,JobTitle,Company,vacancy,TopSkills,MinorSkills")] JobSettings jobSettings)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(jobSettings);
+               
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(jobSettings);
+        }
         public IActionResult Import()
         {
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Filter(string jobCategory,string Skills,string location)
+        {
+            
+            List<CandidateInfo>candidateList = _context.Candidate.FromSql("select distinct Phone,Name,Email,Skills,substring(Summary,0,300) as 'Summary' ,Experience,Education,0 as 'Id'  from Candidate where len(Phone)>0 and LEN(Name)>0").ToList();
+            ViewBag.candidateList = candidateList;
+            return View();
+        }
+
         public IActionResult Filter()
         {
+            //var data = _context.Candidate.FromSql("");
             return View();
         }
 
@@ -60,8 +102,10 @@ namespace JobPortal.Controllers
         public IActionResult ImportList(EmailSettings model)
         {
             var client = new MailRepository();
-           // client.Connect(hostname: "imap.gmail.com", username: "taherasiddqua@gmail.com", password: "taherasiddqua007", port: 995, isUseSsl: true);
-            client.Connect(hostname: model.Host, username: model.UserName, password: model.Password, port: 995, isUseSsl: true);
+             client.Connect(hostname: "imap.gmail.com", username: "taherasiddqua@gmail.com", password: "taherasiddqua007", port: 995, isUseSsl: true);
+            //client.Connect(hostname: "imap.gmail.com", username: "zahid.bubt27@gmail.com", password: "zahidhasan1234", port: 995, isUseSsl: true);
+
+            //client.Connect(hostname: model.Host, username: model.UserName, password: model.Password, port: 995, isUseSsl: true);
             var allMail = client.GetMail();
             var emailList = new List<EmailMessage>();
             foreach (var mail in allMail)
@@ -106,11 +150,81 @@ namespace JobPortal.Controllers
         }
 
         [HttpPost]
-        public IActionResult Process(EmailSettings model)
+        public IActionResult Upload(IFormFile file)
         {
-            Parser parser = new Parser();
-            parser.ParseData();
+            try
+            {
+                var fileName = file.FileName;
+                if (fileName != null)
+                {
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Attchment", fileName);
+                    using (var fileStream = new FileStream(path, FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+           
+
+            //var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Attchment", fileName);
+            //using (var fileStream=new FileStream(path,FileMode.Create))
+            //{
+            //    file.CopyTo(fileStream);
+            //}
+
             return View();
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult> Process()
+        {
+
+            Parser parser = new Parser();
+            DataTable dt = parser.ParseData();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                candidate = new CandidateInfo();
+                candidate.Name = row["name"].ToString();
+                candidate.Email = row["email"].ToString();
+                candidate.Phone = row["phone"].ToString();
+                candidate.Skills = row["skills"].ToString();
+                candidate.Summary = row["summary"].ToString();
+                candidate.Experience = row["experience"].ToString();
+                candidate.Education = row["education"].ToString();
+                 // candidate. = row["interests"].ToString();
+
+                 if (ModelState.IsValid)
+                 {
+                     _context.Add(candidate);                   
+                    await _context.SaveChangesAsync();
+                     //return RedirectToAction(nameof(Index));
+                 }
+
+               
+
+
+            }
+            return View();
+        }
+
+
+        [HttpPost]
+        public JsonResult GetFIlterJsonResult(string jobCategory)
+        {
+            //var sa = new JsonSerializerSettings();
+            //List<CandidateInfo> candidateList=new List<CandidateInfo>();
+            //candidateList = _context.Candidate.ToList();
+            string x = jobCategory;
+            IEnumerable<CandidateInfo> candidateList = _context.Candidate.FromSql("select * from Candidate where len(Phone)>0").ToList();
+            ////return Json(courses, JsonRequestBehavior.AllowGet);
+            return Json(candidateList);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
