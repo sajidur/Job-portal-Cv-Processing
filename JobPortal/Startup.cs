@@ -29,7 +29,7 @@ namespace JobPortal
         {
             services.AddDbContext<JobPortalDbContext>(options =>
                 options.UseSqlServer(
-                    @"Data Source=DESKTOP-D772VHN\SQLEXPRESS;Initial Catalog=JobPortal;Integrated Security=True;", b => b.UseRowNumberForPaging()));
+                    DBSettings.DbConnection, b => b.UseRowNumberForPaging()));
             services.AddMvc();
             services.Configure<CookiePolicyOptions>(options =>
             {

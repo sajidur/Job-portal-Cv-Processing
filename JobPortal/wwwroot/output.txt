@@ -1,79 +1,55 @@
 ﻿
 Evaluation Only. Created with Aspose.Words. Copyright 2003-2019 Aspose Pty Ltd.
 Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
-Curriculum VitaeOf
-MD. ZAHID HASAN
-R/A Road-13, House No-9Mirpur-6, Dhaka-1216 Contact: +8801773-333963
-E-mail: zahid.cse07@gmail.com
-CAREER OBJECTIVE
-I would like to build up my career as an IT professional. To gain a challenging position in awell-reputed organization that will utilize my talent properly and provide me with theopportunity of enhancing my skill.
-KEY SKILLS
-· Experience building a variety of different web applications and sites using PHP and
-MYSQL.
-· Good knowledge and understanding of Object Oriented Programming (OOP).· Good knowledge of Database.
-· Experience in working with MYSQL and SQL Server.· Good analytical, logical and programming skills.· Basic knowledge of MVC framework.
-· Ability to learn & develop using new technologies quickly.
-TECHNICAL SKILLS
-· Programming Language : C++, C#, JAVA, PHP.
-· Database : MS SQL Server, MySQL.· Client-side : Html, CSS, Bootstrap, JavaScript, jQuery, Ajax.· Development Tools : NetBeans, PHPStorm, Eclipse, Visual Studio.· Microsoft Technologies : ASP.Net, C#.Net, ADO.Net· Application Servers : Apache
-· Version Control : Familiar with Git.
-INTERNSHIP
-· Course Name : Web Development Using PHP.
-Training Institute : IBCS-PRIMAX : Dhanmondi, Dhaka-1209
-Duration : 2 months
+Curriculum Vitae of Tahera SiddiquaTahera Siddiqua Cell : 8801719304970
+E-mail: taherasiddqua@gmail.com
+CAREER OBJECTIVES :
+I would like to have an opportunity to be employed in that position where I canimplement my skills which would helpful to maximize the output of the company andthus to build up myself as dynamic, energetic, ambitious, good oriented and enthusiasticemployee through work and technology.
+SPECIALIZATION:
+I am experienced in the following functional areas departmental development, HumanResource Information Systems (HRIS), employee relations, training and development,benefits, compensation, organizational development, and employment.
+Experience
+1.  I am now working as a Jr. Executive, HR at Rex Systems from 03-02-2017 to
+continue.
+Where my roles & responsibilities are shown in below:• Manage recruitment and selection of staff• Plan and conduct new employee orientation• Administer compensation and benefits
+• Support annual salary review with HR professional network• Handle employee complaints, grievances and disputes• Administer employee discipline processes• Conduct exit interviews
+• Review and update employee rules and regulations• Maintain knowledge of legal requirements and organizational governanceaffecting HR functions.
+• Employee services and counseling.
+.
+1
 
 
 Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
-PROJECTS
-· Project Title : E-commerce Site using PHP
-Description : an E-commerce website for online shopping, include shopping
-cart, product search.
-Technologies used : PHP, MySQL, Html, JavaScript, JQuerySource Code link : https://github.com/zahid99/ecommerce/
-· Project Title : Online Doctor Appointment System
-Description : Online Doctor appointment booking system that provides patients or any user an easy way of booking a doctor's appointment online, include doctor search.
-Technologies used : PHP, MySQL, Html, JavaScript, JQuerySource Code link :  https://gitlab.com/zahid99/doctor-appointment
-· Project Title : TV site Using PHP
-Technologies used : PHP, MySQL, Html, JavaScriptLive Demo : https://gitlab.com/zahid99/tv-7unity
-· Project Title : Blog Site using PHP
-Technologies used : PHP, Html, JavaScript, Bootstrap, MySQLSource Code link : https://gitlab.com/zahid99/blog
-· Project Title : Online Courier Management System
-Technologies used : PHP, Html, JavaScript, Bootstrap, MySQLSource Code link : https://gitlab.com/zahid99/courier
-· Project Title : Online Event Information
-Technologies used : C#, ASP.Net, Html, JavaScript, Bootstrap, SQL ServerSource Code link : https://github.com/zahid99/event-information-system
-EDUCATION
-· Bachelor of Science in Computer Science Engineering
-Institution : Bangladesh University of Business & Technology (BUBT).Result : 3.30 Duration : 2014-2018
-· Higher Secondary Certificate (H.S.C)
-Institution : Govt. Azizul Haque College.Result : 4.60 Duration : 2011-2012
-· Secondary School Certificate (S.S.C)
-Institution : Police Lines High School and College.Result : 5.00 Duration : 2010
+LANGUAGES
+Type Spoken Writing Listening
+English Medium Medium Skilled
+Bengali Skilled Skilled Skilled
+Hindi Medium N/A Skilled
+EDUCATIONAL QUALIFICATIONS:
+Exam Title Concentration/Major Institute CGPA Pass. Year
+
+BBA Business Administrator Dhaka City College, National
+ University
+
+3.1  2015
+H.S.C Commerce Lalmatia Mohila College 3.30 2010
+S.S.C Science Group Bheramara Girls High School 3.50 2008
+PERSONAL DETAILS:
+Father’s Name : Md Rafiqul Haque Mother’s Name : Mst. Bilik Akter
+Permanent Address : Village: Khazanagor, P.O: Bottoil, KushtiaPresent Address : 429/2/A, South Paikpara, Mirpur,DhakaDate of Birth : 05 March 1992 Religion : Muslim (Sunni)
+Marital Status : Married Gender : Female
+Nationality : Bangladeshi (By Birth)Blood Group : B+
+HOBBIES AND INTERESTS :
+Reading, Internet Browsing, Traveling.
+2
 
 
 Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
-EXTRA-CURRICULAR ACTIVITIES
-· Participation in Programming contest.
-· Member at Microsoft Student Partnership (MSP) from Feb 2017-Feb 2018.
-PORTFOLIO
-My Portfolio is available on https://zahid99.github.io/zahid/
-PERSONAL PROFILE
-· Father’s Name : MD. ZAHURUL ISLAM
-· Mother’s Name : MST. ZAHERA BEGUM
-· Date of Birth : DECEMBER 18, 1995
-· Gender : Male
-· Marital Status : Unmarried
-· Nationality : Bangladeshi
-· Religion : Islam
-· Permanent address : Village: Lotifpur, Post-office: Bogura sadar, District: Bogura
-· Current Location : Dhaka
-REFERENCES
- Md. Fahad Md. Fazle RabbiAssistant Database Administrator Lecturer Sonali Bank Ltd Department of Computer Science IT Division (BUBT)
-Head Office, Motijheel, Dhaka-1000. Phone: +8801913446575
-Phone: +8801913242961 E-mail: rabbi102@gmail.com
-E-mail: fahad.cse.cu@gmail.com
- I am undersigned, hereby declare that I will be responsible for any wrong informationprovided here.
-(ZAHID)
-Date: 16-09-2018
-
-
-Evaluation Only. Created with Aspose.PDF. Copyright 2002-2018 Aspose Pty Ltd.
+REFEREES:
+1.  Md. Ahsan Habib, Chairman Dept of ICT
+Mawlana Bhashani Science and Technology University
+2.  Md.Reazaul Karim Principal Software EngineerReliSource Technologies Ltd.
+DECLARATION:
+I do hereby declare that the above information is true and correct to the best of myKnowledge.
+Date: Signature
+3
 Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/

@@ -36,7 +36,6 @@ C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcorea
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.dll
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.pdb
 C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.csproj.CopyComplete
-C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.csprojAssemblyReference.cache
 D:\Rex Web Solution Bangladesh\New folder (2)\Job-portal-Cv-Processing\JobPortal\bin\Debug\netcoreapp2.2\JobPortal.deps.json
 D:\Rex Web Solution Bangladesh\New folder (2)\Job-portal-Cv-Processing\JobPortal\bin\Debug\netcoreapp2.2\JobPortal.runtimeconfig.json
 D:\Rex Web Solution Bangladesh\New folder (2)\Job-portal-Cv-Processing\JobPortal\bin\Debug\netcoreapp2.2\JobPortal.runtimeconfig.dev.json
@@ -121,3 +120,10 @@ D:\Rex Web Solution Bangladesh\Job-portal-Cv-Processing\JobPortal\obj\Debug\netc
 D:\Rex Web Solution Bangladesh\Job-portal-Cv-Processing\JobPortal\obj\Debug\netcoreapp2.2\Razor\Views\JobSettings\Edit.g.cshtml.cs
 D:\Rex Web Solution Bangladesh\Job-portal-Cv-Processing\JobPortal\obj\Debug\netcoreapp2.2\Razor\Views\JobSettings\Index.g.cshtml.cs
 D:\Rex Web Solution Bangladesh\Job-portal-Cv-Processing\JobPortal\obj\Debug\netcoreapp2.2\Razor\Views\Home\Import - Copy.g.cshtml.cs
+C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\Razor\Views\Home\Import - Copy.g.cshtml.cs
+C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\Razor\Views\JobSettings\Create.g.cshtml.cs
+C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\Razor\Views\JobSettings\Delete.g.cshtml.cs
+C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\Razor\Views\JobSettings\Details.g.cshtml.cs
+C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\Razor\Views\JobSettings\Edit.g.cshtml.cs
+C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\Razor\Views\JobSettings\Index.g.cshtml.cs
+C:\Users\Mobashwir Hasan\Documents\GitHub\JobPortal\JobPortal\obj\Debug\netcoreapp2.2\JobPortal.csprojAssemblyReference.cache
